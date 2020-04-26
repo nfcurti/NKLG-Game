@@ -266,7 +266,7 @@ class playGame extends Phaser.Scene{
 
         // checking for input
         this.input.keyboard.on("keydown_SPACE", this.jump, this);
-
+        this.input.on("pointerdown", this.jump, this);
         this.add.text(20, 0, "North Korea Liberation Gang\nCommunity has recovered "+score+" out of $32.100 million", {
             fontFamily: "Arial",
             fontSize: 24,
