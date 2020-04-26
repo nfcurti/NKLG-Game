@@ -19,6 +19,3 @@ router.get('/sitemap',function(req,res){
 //add the router
 app.use('/', router);
 app.use("/public",express.static("public"));
-app.listen(process.env.port || 3002);
-
-console.log('Running at Port 3002');
