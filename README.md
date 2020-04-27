@@ -23,9 +23,9 @@ In order to make it work just clone the repo and run
 
 ## Customization
 
-Inside the public directory there's a filled called game.js which renders the full canvas and also handles game options.
+Inside the public directory there's a file called game.js which renders the full canvas and also handles game options.
 
-For example, if you want gravity to be heavier change
+# Gravity 
 
 ``` 
 // player gravity
@@ -35,8 +35,21 @@ For example, if you want gravity to be heavier change
 to
 
 ``` 
-// player gravity
+// heavier player gravity
     playerGravity: 2000,
 ```
 
+# Jump Force 
+
+``` 
+// player jump force
+    jumpForce: 600,
+```
+
+to
+
+``` 
+// player jump force (jumps higher)
+    jumpForce: 800,
+```
 
