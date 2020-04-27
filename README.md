@@ -19,3 +19,18 @@ Built around Phaser.js library:
 For help getting started with Phaser, view their docs 
 [online documentation](https://phaser.io/docs), which offers tutorials, 
 samples, guidance on game development.
+
+## Customization
+
+Inside the public directory there's a filled called game.js which renders the full canvas and also handles game options.
+
+For example, if you want gravity to be heavier change
+
+``` // player gravity
+    playerGravity: 1500,```
+
+to
+
+``` // player gravity
+    playerGravity: 2000,```
+
