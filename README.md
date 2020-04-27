@@ -26,11 +26,17 @@ Inside the public directory there's a filled called game.js which renders the fu
 
 For example, if you want gravity to be heavier change
 
-``` // player gravity
-    playerGravity: 1500,```
+``` 
+// player gravity
+    playerGravity: 1500,
+    
+```
 
 to
 
-``` // player gravity
-    playerGravity: 2000,```
+``` 
+// player gravity
+    playerGravity: 2000,
+    
+```
 
