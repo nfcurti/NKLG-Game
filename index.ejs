@@ -4,6 +4,9 @@
 	<head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164575999-1"></script>
+  <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+
+  <h1 style="display: none" id="h1"><%=coinCounter%></h1>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -22,6 +25,9 @@
         <script type="text/javascript" src = "public/game.js"></script>
     </head>
 	<body>
+        <form id="send" style="display: none" method="POST" action="/">
+            <input type="" name="score" id="score">
+        </form>
         <div id = "thegame"></div>
 	</body>
 </html>

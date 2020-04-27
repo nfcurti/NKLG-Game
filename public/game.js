@@ -38,7 +38,7 @@ let gameOptions = {
     jumps: 2,
 
     // % of probability a coin appears on the platform
-    coinPercent: 25,
+    coinPercent: 50,
 
     // % of probability a fire appears on the platform
     firePercent: 25
@@ -267,7 +267,7 @@ class playGame extends Phaser.Scene{
         // checking for input
         this.input.keyboard.on("keydown_SPACE", this.jump, this);
         this.input.on("pointerdown", this.jump, this);
-        this.add.text(20, 0, "North Korea Liberation Gang\nCommunity has recovered "+score+" out of $32.100 million", {
+        this.add.text(20, 0, "North Korea Liberation Gang\nCommunity has recovered $ "+document.getElementById('h1').innerHTML+" out of $ 32 100 000 000 ", {
             fontFamily: "Arial",
             fontSize: 24,
             color: "#ffffff",
@@ -395,6 +395,33 @@ class playGame extends Phaser.Scene{
 
         // game over
         if(this.player.y > game.config.height){
+            console.log('You lost '+score)
+
+            $.ajax({ 
+           url: '/',
+           type: 'POST',
+           cache: false, 
+           data: { score: score}, 
+           success: function(data){
+              alert('Success!')
+           }
+           , error: function(jqXHR, textStatus, err){
+               console.log('Error')
+           }
+        })
+            $.ajax({ 
+           url: '/data',
+           type: 'GET',
+           cache: false, 
+           data: { score: score}, 
+           success: function(data){
+            console.log(score)
+            document.getElementById("h1").innerHTML = score;
+           }
+           , error: function(jqXHR, textStatus, err){
+               console.log(err)
+           }
+        })
             this.scene.start("PlayGame");
         }
 
