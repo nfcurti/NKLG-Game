@@ -29,7 +29,6 @@ For example, if you want gravity to be heavier change
 ``` 
 // player gravity
     playerGravity: 1500,
-    
 ```
 
 to
@@ -37,6 +36,5 @@ to
 ``` 
 // player gravity
     playerGravity: 2000,
-    
 ```
 
